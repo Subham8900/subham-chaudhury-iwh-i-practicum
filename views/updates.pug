@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    title= "Update Custom Object Form | Integrating With HubSpot I Practicum"
+  body
+    h1= "Update Custom Object Form | Integrating With HubSpot I Practicum"
+    p
+      | This is the updates page content.
+
+    form(action="/updated-cobj", method="post")
+      
+
+      label(for="firstName") First Name:
+      br
+      input(type="text", name="firstName", required)
+      br
+
+      label(for="lastName") Last Name:
+      br
+      input(type="text", name="lastName", required)
+      br
+
+      label(for="email") Email:
+      br
+      input(type="email", name="email", required)
+      br
+
+      button(type="submit") Update Contact
+      br
+
+    // Link to return to the homepage
+    a(href='/') Return to the homepage

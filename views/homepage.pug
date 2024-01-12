@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title= pageTitle
+  body
+    h1= pageTitle
+    
+    // Add a link to "Add/Update this table"
+    a(href="/updated-cobj") Add/Update this table
+   
+    // Display CRM record data in a table with borders around each cell
+    table(style="border-collapse: collapse;margin-Top:5px;")
+      tr(style="border: 1px solid black; background-color: pink;")
+        th  First Name
+        th  Last  Name
+        th Email
+        // Add more headers for additional custom properties
+
+      // Iterate through CRM record data and display each row
+      each record in crmRecords
+        tr(style="border: 1px solid black;")
+          td(style="border: 1px solid black;")= record.properties.firstname 
+          td(style="border: 1px solid black;")= record.properties.lastname
+          td(style="border: 1px solid black;")= record.properties.email
+          // Add more cells for additional custom properties
+
+    
